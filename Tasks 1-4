@@ -1,0 +1,76 @@
+//task 1 . Current Date na ftiaksw
+var currentYear;
+var birthYear;
+function calculateAge (birthYear, currentYear) {
+var age= currentYear-birthYear;
+
+document.write('You are either ' +(age-1) + ' or ' +age+ '<br>'  );
+}
+
+calculateAge(1989,2015);
+
+calculateAge(1909,2015);
+calculateAge(1947,2015);
+
+//task 2
+
+var age;
+var amountPerDay;
+function calculateSupply(age,amountPerDay)
+{	
+
+var supplies =(80-age)*365 *amountPerDay;
+
+document.write('You will need '+supplies+ ' to last you until the ripe old age of 80');
+
+}
+
+calculateSupply(20,2);
+calculateSupply(40,5);
+calculateSupply(48,3);
+
+//task 3
+  var radius ;
+ function calcCircumfrence(radius)
+ {
+ 
+		var circ = 2*radius*Math.PI;
+		document.write('The circumference is ' +circ +'<br>');
+ 
+ }
+ 
+ calcCircumfrence(3.1);
+
+function calcArea(radius){
+ 
+		var area = 2*radius*radius*Math.PI;
+		document.write('The area is ' +area + '<br>');
+ 
+ }
+ calcArea(4);
+ 
+ 
+ //task 4 
+ 
+ function fahrenheitToCelsius(){
+ 
+ var celsius =150 ;
+ 
+ celsius = (celsius-32)*5/9;
+ 
+ document.write('The temperature is in Celsius ' + celsius+ '<br>' );
+ 
+ }
+fahrenheitToCelsius();
+
+
+ function celsiusToFahreneit(){
+ 
+ var fahreneit =37 ;
+ 
+ fahreneit = (fahreneit*9/5)+32;
+ 
+ document.write('The temperature is in Fahreneit ' + fahreneit + '<br>' );
+ 
+ }
+ celsiusToFahreneit();
