@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+body {
+    background-color: #C63D0F;
+}
+
+h1 {
+text-align : center; }
+
+
+ button {
+     width: 100%;
+     height: 100%;
+}
+
+
+
+</style>
+
+
+<h1>WireDelta Sample Test</h1>
+<hr>
+<hr>
+<h2>Task 1 - Age Calculator </h2>
+
+<form>
+  Birth Year<br>
+  <input type="text" id="birth">
+  <br>
+ Current Year  :<br>
+  <input type="text" id="current" >
+ <br>
+
+Calculate	<input type="button"  onclick="calculateAge(birthYear,currentYear)">
+<br>
+ Age <input type="text" id="Age" > :<br>
+  
+  <br>
+</form>
+
+<hr>
+<h2>TASK 2: THE LIFETIME SUPPLY CALCULATOR</h2>
+
+<form>
+
+  Age<br>
+  <input type="text" id="age_1">
+  <br>
+Ammount per day :<br>
+  <input type="text" id="amount" >
+ <br>
+
+Calculate	<input type="button" onclick="calculateSupply(age,amountPerDay)">
+<br>
+ Supply <input type="text" id="supply" > :<br>
+  <hr>
+<h2>TASK 3: TASK 3: THE GEOMETRIZER</h2>
+<form>
+
+  Radius<br>
+  <input type="text" id="radius">
+  <br>
+  
+Calculate Circumferene	<input type="button" onclick="calculateCircumference(radius)">
+<br>
+Calculate Area	<input type="button" onclick="calculateArea(radius)">
+<br>
+Circumference :<br>
+  <input type="text" id="circum" >
+ <br>
+Area :<br>
+  <input type="text" id="area" >
+
+ 
+ 
+ <h2>TASK 4: THE TEMPERATURE CONVERTER</h2>
+<form>	
+ Celsius <br>
+  <input type="text" id="cels">
+  <br>
+ Fahreneit <br>
+  <input type="text" id="fahr">
+  <br>
+  Calculate	<input type="button" onclick="calculateCircumference(radius)">
+ <hr>
+
+<br>
+<script type="text/javascript"> 
+
+ var currentYear = document.getElementById("current").value;
+ var birthYear = document.getElementById("birth").value;
+
+
+function calculateAge (birthYear, currentYear) {
+
+
+var age= currentYear-birthYear;
+
+document.getElementById('Age').value='You are either ' +(age-1) + ' or ' +age ;
+}
+
+//calculateAge(1989,2015);
+
+//calculateAge(1909,2015);
+//calculateAge(1947,2015);
+
+var age=document.getElementById('age_1').value;
+var amountPerDay=document.getElementById('amount').value;
+function calculateSupply(age,amountPerDay)
+{	
+
+var supplies =(80-document.getElementById("age_1"))*365 *document.getElementById("amount");
+document.getElementById('supply').value=('You will need '+supplies+ ' to last you until the ripe old age of 80');
+
+
+}
+
+var radius =document.getElementById("radius".value) ;
+ function calcCircumfrence(radius)
+ {
+ 
+		var circ = 2*radius*Math.PI;
+		document.getElementById('circum').value=('The circumference is ' +circ +'<br>');
+ 
+ }
+ function calcArea(radius){
+ 
+		var area = 2*radius*radius*Math.PI;
+		document.write('The area is ' +area + '<br>');
+ 
+ }
+ 
+ function fahrenheitToCelsius(){
+ 
+ var celsius =150 ;
+ 
+ celsius = (celsius-32)*5/9;
+ 
+ document.write('The temperature is in Celsius ' + celsius+ '<br>' );
+ 
+ }
+
+
+
+ function celsiusToFahreneit(){
+ 
+ var fahreneit =37 ;
+ 
+ fahreneit = (fahreneit*9/5)+32;
+ 
+ document.write('The temperature is in Fahreneit ' + fahreneit + '<br>' );
+ 
+ }
+ 
+
+</script>
+
+</body>
+</html> 
